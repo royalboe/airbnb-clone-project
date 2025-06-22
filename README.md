@@ -121,23 +121,22 @@ Environment variables (.env) will be used to securely store secrets like API key
 
 ## CI/CD Pipeline
 
-ChatGPT said:
-Here’s what you can include under the CI/CD Pipeline section of your README.md for the Airbnb Clone Project, written clearly and ready to paste:
-
-🚀 CI/CD Pipeline
 To ensure consistent integration and deployment of code changes, this project will utilize a CI/CD (Continuous Integration/Continuous Deployment) pipeline.
 
-✅ What is CI/CD?
+### What is CI/CD?
+
 - Continuous Integration (CI) involves automatically building, testing, and validating code whenever changes are pushed to the repository.
 - Continuous Deployment (CD) automates the delivery of tested code to production or staging environments.
 This process improves development speed, reduces bugs in production, and ensures the project remains in a deployable state at all times.
 
-🛠️ Tools Used
+### Tools Used
+
 - GitHub Actions: Automates workflows such as testing, linting, and deployment upon push or pull requests.
 - Docker: Containerizes the application to ensure consistent behavior across different environments.
 - Heroku / Render / AWS / Railway (Optional): A platform-as-a-service (PaaS) provider that can host the deployed application.
 
-🔄 Planned Workflow
+### Planned Workflow
+
 - Code Push: Developer pushes code to a GitHub branch (e.g., main, dev).
 - Automated Tests: GitHub Actions runs unit tests using pytest or Django’s test framework.
 - Linting & Formatting: Code is checked using tools like flake8 or black.
