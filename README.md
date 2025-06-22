@@ -65,23 +65,23 @@ A backend-focused Airbnb clone built with Django REST Framework to master API de
  ## Feature Breakdown
 
 1. User Authentication
-Endpoints: /users/, /users/{user_id}/
-Features: Register new users, authenticate, and manage user profiles.
+  - Endpoints: /users/, /users/{user_id}/
+  - Features: Register new users, authenticate, and manage user profiles.
 2. Property Management
-Endpoints: /properties/, /properties/{property_id}/
-Features: Create, update, retrieve, and delete property listings.
+  - Endpoints: /properties/, /properties/{property_id}/
+  - Features: Create, update, retrieve, and delete property listings.
 3. Booking System
-Endpoints: /bookings/, /bookings/{booking_id}/
-Features: Make, update, and manage bookings, including check-in and check-out details.
+  - Endpoints: /bookings/, /bookings/{booking_id}/
+  - Features: Make, update, and manage bookings, including check-in and check-out details.
 4. Payment Processing
-Endpoints: /payments/
-Features: Handle payment transactions related to bookings.
+  - Endpoints: /payments/
+  - Features: Handle payment transactions related to bookings.
 5. Review System
-Endpoints: /reviews/, /reviews/{review_id}/
-Features: Post and manage reviews for properties.
+  - Endpoints: /reviews/, /reviews/{review_id}/
+  - Features: Post and manage reviews for properties.
 6. Database Optimizations
-Indexing: Implement indexes for fast retrieval of frequently accessed data.
-Caching: Use caching strategies to reduce database load and improve performance.
+  - Indexing: Implement indexes for fast retrieval of frequently accessed data.
+  - Caching: Use caching strategies to reduce database load and improve performance.
 
 
 ## API Security
@@ -89,33 +89,33 @@ Caching: Use caching strategies to reduce database load and improve performance.
 Ensuring robust security is critical in a platform handling sensitive data such as user profiles, bookings, and payments. The following security measures will be implemented:
 
 1. Authentication
-Use JWT (JSON Web Tokens) or Token-based Authentication to verify the identity of users.
-Authenticated users will receive secure tokens upon login to access protected endpoints.
-Passwords will be hashed using a secure algorithm (e.g., Argon2 or Django’s default PBKDF2).
+  - Use JWT (JSON Web Tokens) or Token-based Authentication to verify the identity of users.
+  - Authenticated users will receive secure tokens upon login to access protected endpoints.
+  - Passwords will be hashed using a secure algorithm (e.g., Argon2 or Django’s default PBKDF2).
 
 2. Authorization
-Role-based access control will be enforced (e.g., only hosts can create/edit properties).
-Permissions will be used to restrict access to actions based on user type and ownership of data.
+  - Role-based access control will be enforced (e.g., only hosts can create/edit properties).
+  - Permissions will be used to restrict access to actions based on user type and ownership of data.
 
 3. Rate Limiting
-Prevent brute force attacks and API abuse by implementing request throttling.
-Tools like Django REST Framework's throttling classes will be configured for key endpoints.
+  - Prevent brute force attacks and API abuse by implementing request throttling.
+  - Tools like Django REST Framework's throttling classes will be configured for key endpoints.
 
 4. Input Validation & Serialization
-All input data will be validated through DRF serializers to avoid injection attacks and malformed requests.
-Strict type checking, length validation, and sanitation will be enforced.
+  - All input data will be validated through DRF serializers to avoid injection attacks and malformed requests.
+  - Strict type checking, length validation, and sanitation will be enforced.
 
 5. HTTPS Enforcement
-All API communications will be over HTTPS to ensure end-to-end encryption of requests and responses (especially in production deployments).
+  - All API communications will be over HTTPS to ensure end-to-end encryption of requests and responses (especially in production deployments).
 
 6. CSRF Protection
-For web-based frontend clients using cookies, CSRF protection will be enabled to prevent cross-site request forgery.
+  - For web-based frontend clients using cookies, CSRF protection will be enabled to prevent cross-site request forgery.
 
 7. CORS Configuration
-CORS (Cross-Origin Resource Sharing) will be configured to allow only approved frontend origins to interact with the API.
+  - CORS (Cross-Origin Resource Sharing) will be configured to allow only approved frontend origins to interact with the API.
 
 8. Sensitive Data Handling
-Payment data, user credentials, and session tokens will never be exposed in logs or error messages.
+  - Payment data, user credentials, and session tokens will never be exposed in logs or error messages.
 
 Environment variables (.env) will be used to securely store secrets like API keys and DB credentials.
 
